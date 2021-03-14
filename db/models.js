@@ -41,3 +41,17 @@ const chatSchema = mongoose.Schema({
 const ChatModel = mongoose.model('chat', chatSchema) 
 //Export  Model
 exports.ChatModel = ChatModel
+
+// Define the post collection
+const jobPostSchema = mongoose.Schema({
+  from: {type: String, required: true}, // Send user's id
+  to: {type: String, required: true}, // Receiving user's id
+  chat_id: {type: String, required: true}, // String composed of from and to
+  content: {type: String, required: true}, // content
+  create_time: {type: Number} // Creation time
+  cr_time: {type: Number} // Creation time
+})
+// Define the chat model
+const JobPostModel = mongoose.model('jobPost', jobPostSchema) 
+//Export  Model
+exports.JobPostModel = JobPostModel
