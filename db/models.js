@@ -4,7 +4,7 @@ Contains some Model modules that manipulate database collection data
 
 /*Connect to the database*/
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/hireeasy_db')
+mongoose.connect('mongodb+srv://dbUserGroup4:Project4@hireeasy.leh3f.mongodb.net/dbHireEasy?retryWrites=true&w=majority')
 const conn = mongoose.connection
 conn.on('connected', () => {
   
